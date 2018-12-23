@@ -1,6 +1,12 @@
 package com.dcp160;
+
 import java.util.TreeSet;
 
+
+/*
+ Problem : Given a tree where each edge has a weight, compute the length of the longest path in the
+ tree.
+ */
 public class Dcp160 {
 
   Tree longest = Tree.emptyTree();
@@ -17,7 +23,7 @@ public class Dcp160 {
     if (tree == null) {
       return Tree.emptyTree();
     }
-    TreeSet<Tree> trees = new TreeSet<>((t1,t2)->t2.value-t1.value);
+    TreeSet<Tree> trees = new TreeSet<>((t1, t2) -> t2.value - t1.value);
     if (tree.children != null) {
       for (Tree child : tree.children) {
         trees.add(getLongest(child));
