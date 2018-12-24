@@ -3,13 +3,13 @@ package com.dcp160;
 import com.google.common.collect.ImmutableList;
 import java.util.List;
 
-public class Tree {
+class Tree {
 
-  public final String name;
-  public final int value;
-  public ImmutableList<Tree> children;
+  final String name;
+  final int value;
+  ImmutableList<Tree> children;
 
-  public Tree(String name, int value) {
+  Tree(String name, int value) {
     this.name = name;
     this.value = value;
   }
@@ -29,7 +29,7 @@ public class Tree {
     return builder.toString();
   }
 
-  public static Tree emptyTree() {
-    return new Tree("",0);
+  static Tree emptyTree() {
+    return new Tree("", 0);
   }
 }

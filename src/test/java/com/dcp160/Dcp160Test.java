@@ -1,9 +1,6 @@
-package dcp160;
+package com.dcp160;
 
-import com.dcp160.Dcp160;
-import com.dcp160.Tree;
 import com.google.common.collect.ImmutableList;
-import java.util.List;
 import org.junit.Test;
 
 public class Dcp160Test {
@@ -56,7 +53,7 @@ public class Dcp160Test {
     d.children = ImmutableList.of(e,f);
     e.children = ImmutableList.of(g,h);
     System.out.println(dcp160.getLongestPath(a));
-    //assert  dcp160.getLongestPath(a).equals("gedac");
+    //assert  com.dcp160.getLongestPath(a).equals("gedac");
   }
 
   @Test

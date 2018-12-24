@@ -13,15 +13,17 @@ import java.util.stream.Stream;
  * For example, given the string "acbbac", return "b". Given the string "abcdef", return null.
  */
 
-public class Dcp159 {
+class Dcp159 {
 
   private Set<String> charsSoFar = new HashSet<>();
 
-  public String findFirstRecurringChar(String str) {
-     for(String c: str.split("")) {
-        if(charsSoFar.contains(c)) return c;
-        charsSoFar.add(c);
-     }
-     return null;
+  String findFirstRecurringChar(String str) {
+    for (String c : str.split("")) {
+      if (charsSoFar.contains(c)) {
+        return c;
+      }
+      charsSoFar.add(c);
+    }
+    return null;
   }
 }
